@@ -3,7 +3,6 @@ package pl.coderslab.charity.model;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import sun.util.resources.LocaleData;
 
 import javax.persistence.*;
 import java.time.LocalDate;
