@@ -13,4 +13,5 @@ public class DonationServiceImpl implements DonationService{
     public long countAll() {
         return donationRepository.findAll().stream().count();
     }
+
 }
