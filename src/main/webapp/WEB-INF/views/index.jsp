@@ -18,7 +18,7 @@
         </div>
 
         <div class="stats--item">
-            <em>5</em>
+            <em>${donationsCount}</em>
             <h3>Przekazanych darów</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam magnam, sint nihil cupiditate quas
                 quam.</p>
@@ -77,7 +77,7 @@
         <p>W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy.
             Możesz sprawdzić czym się zajmują.</p>
 
-        <ul class="help--slides-items"><br>
+        <ul class="help--slides-items">
             <li>
             <c:forEach items="${institutions}" var="inst" varStatus="loopCounter">
                 <div class="col">
