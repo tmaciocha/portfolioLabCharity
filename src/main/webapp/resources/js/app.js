@@ -171,4 +171,8 @@ document.addEventListener("DOMContentLoaded", function() {
   if (form !== null) {
     new FormSteps(form);
   }
+
+
+  const pickUpTime = document.querySelector('#pickUpTime')
+
 });
