@@ -7,11 +7,13 @@ import pl.coderslab.charity.repository.DonationRepository;
 @Service
 @RequiredArgsConstructor
 public class DonationServiceImpl implements DonationService{
-    private final DonationRepository donationRepository;
+  /*  private final DonationRepository donationRepository;
+
 
     @Override
     public long countAll() {
         return donationRepository.findAll().stream().count();
-    }
+    }//jpql z liczbą
+*/
 
 }

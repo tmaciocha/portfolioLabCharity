@@ -17,6 +17,8 @@ public class InstitutionServiceImpl implements InstitutionService{
     public List<Institution> findAll() {
         return institutionRepository.findAll();
     }
+
+
 }
 
 

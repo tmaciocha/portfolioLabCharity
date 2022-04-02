@@ -36,8 +36,8 @@
             <div data-step="1" class="active">
                 <h3>Zaznacz co chcesz oddać:</h3>
 
-                <form:checkboxes path="categories" items="${categories}" itemLabel="Name" itemValue="id"/>
-                    <%-- !!!!!       <div class="form-group form-group--checkbox">
+               <%-- <form:checkboxes path="categories" items="${categories}" itemLabel="Name" itemValue="id"/>--%>
+               <%--        <div class="form-group form-group--checkbox">
                                 <label>
                                     <input
                                             type="checkbox"
@@ -46,28 +46,28 @@
                                     />
                                     <span class="checkbox"></span>
                                     <span class="description">
-                                        <form:checkboxes path="categories" items="${categories}"
-                                                                                  itemLabel="Name" itemValue="id" />
+                                      &lt;%&ndash;  <form:checkboxes path="categories" items="${categories}"
+                                                                                  itemLabel="Name" itemValue="id" />&ndash;%&gt;
                                     </span>
                                 </label>
                             </div>
-            --%>
+--%>
 
-                    <%--  <c:forEach items="${categories}" var="category">
+                    <c:forEach items="${categories}" var="category">
                       <div class="form-group form-group--checkbox">
 
                                   <label>
                                       <input
                                               type="checkbox"
                                               name="categories"
-                                              value="${category}"
+                                              value="category.id"
                                       />
                                       <span class="checkbox"></span>
                                       <span class="description">${category.name}</span>
                                   </label>
                       </div>
                       </c:forEach>
-      --%>
+
 
 
                 <div class="form-group form-group--buttons">
@@ -83,7 +83,7 @@
                 <div class="form-group form-group--inline">
                     <label>
                         Liczba 60l worków:
-                        <form:input type="number" min="0" path="quantity" name="bags" step="1"/>
+                        <form:input type="number" min="0" path="quantity" name="bags" id="quantity" step="1"/>
                     </label>
                 </div>
 
@@ -99,26 +99,27 @@
                 <h3>Wybierz organizacje, której chcesz pomóc:</h3>
 
                 <div class="form-group form-group--checkbox ">
-                    <form:select path="institution" items="${institutions}" itemLabel="name" itemValue="id"
-                                 type="radio"/>
+                  <%--  <form:select path="institution" items="${institutions}" itemLabel="name" itemValue="id"
+                                 type="radio"/>--%>
                 </div>
 
-                    <%--<c:forEach items="${institutions}" var="institution">
+                   <c:forEach items="${institutions}" var="institution">
 
                         <div class="form-group form-group--checkbox">
                             <label>
-                                <input type="radio" name="organization" value="old"/>
+                                <input type="radio" name="institution" value="institution.id"/>
                                 <span class="checkbox radio"></span>
                                 <span class="description">
-                                  &lt;%&ndash; !!!!!   <form:select path="institution" items="${institutions}" itemValue="id" itemLabel="name"/>&ndash;%&gt;
-                                      <div class="title">${institution.name}</div>
+                                 <%-- <form:select path="institution" items="${institutions}" itemValue="id" itemLabel="name"/>--%>
+                                      <div class="title">${institution.name}
+                        </div>
                               <div class="subtitle">
                                       ${institution.description}
                               </div>
                             </span>
                             </label>
                         </div>
-                    </c:forEach>--%>
+                    </c:forEach>
 
 
                 <div class="form-group form-group--buttons">
@@ -197,7 +198,7 @@
                             <li>
                                 <span class="icon icon-bag"></span>
                                 <span class="summary--text"
-                                >4 worki ubrań w dobrym stanie dla dzieci</span
+                                >  - 4 worki ubrań w dobrym stanie dla dzieci</span
                                 >
                             </li>
 

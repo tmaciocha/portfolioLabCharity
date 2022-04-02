@@ -15,14 +15,14 @@ import pl.coderslab.charity.service.InstitutionServiceImpl;
 @AllArgsConstructor
 public class HomeController {
     private final InstitutionServiceImpl institutionService;
-    private final DonationServiceImpl donationService;
+  //  private final DonationServiceImpl donationService;
     private final DonationRepository donationRepository;
 
 
     @GetMapping("/")
     public String homeAction(Model model){
         model.addAttribute("institutions", institutionService.findAll());
-        model.addAttribute("donationsCount", donationService.countAll());
+        model.addAttribute("donationsCount", donationRepository.countAll());
         model.addAttribute("quantitySum", donationRepository.quantitySum());
         return "index";
     }
