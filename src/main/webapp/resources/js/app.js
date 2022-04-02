@@ -173,6 +173,6 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
 
-  const pickUpTime = document.querySelector('#pickUpTime')
-
+  const bags= document.querySelector('#bagsNumber')
+  const bagsNumberValue = bags.getAttribute();
 });
