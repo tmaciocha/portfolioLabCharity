@@ -8,11 +8,14 @@ import pl.coderslab.charity.model.Donation;
 @Repository
 public interface DonationRepository extends JpaRepository<Donation,Long> {
 
-    @Query(value = "select SUM(quantity)  from donation where quantity>0",nativeQuery = true)//jpql
+    //@Query(value = "select SUM(quantity)  from donation where quantity>0",nativeQuery = true)
+    @Query(value = "select sum(b.quantity) from Donation b where b.quantity>0")//jpql
     Integer quantitySum();
 
-    @Query(value = "select SUM(quantity)  from donation",nativeQuery = true)
+
+  //  @Query(value = "select COUNT(*)  from donation",nativeQuery = true)
+    @Query(value = "select count(b) from Donation b")//jpql
     Integer countAll();
 
-    //public long countAll() {         return donationRepository.findAll().stream().count();     }//jpql z liczbą
+
 }

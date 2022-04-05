@@ -25,10 +25,10 @@ public class Donation {
 
     Integer quantity;// (liczba worków)
 
-    @OneToMany //ManyToMany
+    @ManyToMany //ManyToMany
     List<Category> categories = new ArrayList<>();
 
-    @OneToOne //ManyToOne
+    @ManyToOne //ManyToOne
     Institution institution;
 
     String street;

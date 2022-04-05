@@ -20,13 +20,13 @@ public class DonationController {
 
     private static final Logger logger = LoggerFactory.getLogger(DonationController.class);
 
-    @GetMapping("/1")
+    @GetMapping("/")
     public String form1(Model model){
         model.addAttribute("categories", categoryService.categories());
         model.addAttribute("institutions", institutionService.findAll());
         model.addAttribute("donation", new Donation());
         logger.info(categoryService.categories().toString() + "CATEGORIES!!!!!");
-        return "form1";
+        return "form";
     }
 
 }
