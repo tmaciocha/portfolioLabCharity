@@ -28,7 +28,7 @@ public class Donation {
     @ManyToMany //ManyToMany
     List<Category> categories = new ArrayList<>();
 
-    @ManyToOne //ManyToOne
+    @ManyToOne //ManyToOne  - SPRAWDŹ JAK KONFIGUROWAĆ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     Institution institution;
 
     String street;

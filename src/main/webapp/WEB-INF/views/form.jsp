@@ -31,29 +31,23 @@
     <div class="form--steps-container">
         <div class="form--steps-counter">Krok <span>1</span>/4</div>
 
-        <form:form action="form-confirmation.html" method="post" modelAttribute="donation">
+        <form:form action="/form" method="post" modelAttribute="donation">
+            <form:hidden path="id"/>
             <!-- STEP 1: class .active is switching steps -->
             <div data-step="1" class="active">
                 <h3>Zaznacz co chcesz oddać:</h3>
 
-
                 <c:forEach items="${categories}" var="category">
                     <div class="form-group form-group--checkbox">
+                            <label>
+                                <input type="checkbox" name="categories" value="${category.id}"
+                                       categoriesChecked="${category.name}"/>
+                                <span class="checkbox"></span>
+                                <span class="description">${category.name}</span>
 
-                        <label>
-                            <input
-                                    type="checkbox"
-                                    name="categories"
-                                    value="${category.id}"
-                                    categoriesChecked="${category.name}"
-                            />
-                            <span class="checkbox"></span>
-                            <span class="description">${category.name}</span>
-
-                        </label>
+                            </label>
                     </div>
                 </c:forEach>
-
 
                 <div class="form-group form-group--buttons">
                     <button type="button" class="btn next-step">Dalej</button>
@@ -89,18 +83,18 @@
                 <c:forEach items="${institutions}" var="institution">
 
                     <div class="form-group form-group--checkbox">
-                        <label>
-                            <input type="radio" name="institution"
-                                   value="${institution.name} ${institution.description}"/>
-                            <span class="checkbox radio"></span>
-                            <span class="description">
+                            <label>
+                                <input type="radio" name="institution"
+                                       value="${institution.id}" institutionName="${institution.name}"/>
+                                <span class="checkbox radio"></span>
+                                <span class="description">
                                       <div class="title">${institution.name}
                                       </div>
                               <div class="subtitle">
                                       ${institution.description}
                               </div>
                             </span>
-                        </label>
+                            </label>
                     </div>
                 </c:forEach>
 
