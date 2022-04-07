@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     let institutionChoose = document.getElementsByName('institution');
                     for(let i=0; i<institutionChoose.length; i++){
                         if(institutionChoose[i].checked){
-                            document.getElementById("institutionSummary").innerHTML = "dla:  " + institutionChoose[i].value;
+                            document.getElementById("institutionSummary").innerHTML = "dla:  " + institutionChoose[i].getAttribute("institutionName");
                         }
                     }
 
