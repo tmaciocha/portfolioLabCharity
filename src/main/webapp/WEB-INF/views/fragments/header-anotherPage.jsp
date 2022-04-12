@@ -10,10 +10,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
 
-    <link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>"/>
+    <link rel="stylesheet" href="<c:url value="../../resources/css/style.css"/>"/>
 </head>
 <body>
-<header class="header--form-page">
+<header class="">
     <nav class="container container--70">
         <ul class="nav--actions">
             <li><a href="/login" class="btn btn--small btn--without-border">Zaloguj</a></li>
@@ -28,10 +28,6 @@
             <li><a href="#" class="btn btn--without-border">Kontakt</a></li>
         </ul>
     </nav>
-    <div class="slogan container container--90">
-        <h2>
-            Dziękujemy za przesłanie formularza Na maila prześlemy wszelkie
-            informacje o odbiorze.
-        </h2>
-    </div>
+
+
 </header>
