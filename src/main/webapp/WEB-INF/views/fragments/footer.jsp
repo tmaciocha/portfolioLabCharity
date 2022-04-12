@@ -13,11 +13,10 @@
         </form>
     </div>
     <div class="bottom-line">
-        <span class="bottom-line--copy">Copyright &copy; 2018</span>
+        <span class="bottom-line--copy">Copyright &copy; 2022</span>
         <div class="bottom-line--icons">
-            <a href="#" class="btn btn--small"><img src="../../resources/images/icon-facebook.svg"/></a> <a href="#"
-                                                                                            class="btn btn--small"><img
-                src="../../resources/images/icon-instagram.svg"/></a>
+            <a href="#" class="btn btn--small"><img src="../../resources/images/icon-facebook.svg"/></a> <a href="#" class="btn btn--small">
+            <img src="../../resources/images/icon-instagram.svg"/></a>
         </div>
     </div>
 </footer>
