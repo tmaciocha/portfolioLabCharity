@@ -3,11 +3,11 @@ package pl.coderslab.charity.model;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import net.bytebuddy.implementation.bind.annotation.Default;
+import net.bytebuddy.implementation.bind.annotation.DefaultMethod;
+import org.hibernate.validator.constraints.UniqueElements;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
@@ -21,5 +21,11 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
+    @Column(unique = true)
     String name;
+
+    public Category(String name) {
+        this.name = name;
+    }
+
 }

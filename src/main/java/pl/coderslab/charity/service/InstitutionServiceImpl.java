@@ -18,6 +18,11 @@ public class InstitutionServiceImpl implements InstitutionService{
         return institutionRepository.findAll();
     }
 
+    @Override
+    public void saveInstitution(Institution institution) {
+        institutionRepository.save(institution);
+    }
+
 
 }
 
