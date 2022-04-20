@@ -17,8 +17,15 @@
 <header>
     <nav class="container container--70">
         <ul class="nav--actions">
-            <li><a href="/">Zaloguj</a></li>
-            <li class="highlighted"><a href="/register">Załóż konto</a></li>
+
+            <sec:authorize access="isAnonymous()">
+                <li><a class="btn btn--small btn--without-border" href="/login">Zaloguj</a></li>
+                <li><a href="/register" class="btn btn--small btn--highlighted">Załóż konto</a></li>
+            </sec:authorize>
+
+            <sec:authorize access="isAuthenticated()">
+                <li><a class="btn btn--small btn--without-border" href="/logout">Wyloguj</a></li>
+            </sec:authorize>
         </ul>
 
         <ul>
